@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  web:
+    image: docker-registry.vertace.com/${DOCKER_IMAGE_NAME}:${ENVIRONMENT}
+    container_name: ${DOCKER_IMAGE_NAME}_${ENVIRONMENT}
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${PORT}:80"
+    network_mode: "bridge"
