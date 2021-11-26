@@ -10,83 +10,6 @@ export const authentication = {
   ChangePassword: BASE_URL + "api/user/changepassword",
 }
 
-export const area = {
-  GetAll: BASE_URL + "api/area/",
-  GetOne: BASE_URL + "api/area/",
-  Create: BASE_URL + "api/area/",
-  Update: BASE_URL + "/api/area/",
-  GetPaginated: BASE_URL + "area",
-  Delete: BASE_URL + "api/area/",
-  DeleteAll: BASE_URL + "area/deleteall/",
-  GetPopulatedAreaDetail: BASE_URL + "area/parents/",
-  Areanextlevels: BASE_URL + "area/nextareas/",
-  GetMasterRegions: BASE_URL + "area/masterregions",
-  //GetPopulatedAreaDetail: BASE_URL + "area/parents/",
-  GetOneNextLevel: BASE_URL + "api/level/next/",
-  GetPopulatedAreaDetail: BASE_URL + "area/parents/",
-  Regionnextlevels: BASE_URL + "area/nextlevelarea/",
-  GetChildrenAreas: BASE_URL + "child_areas",
-}
-
-export const departmentArea = {
-  GetAll: BASE_URL + "api/departmentarea/",
-  GetOne: BASE_URL + "api/departmentarea/",
-  Create: BASE_URL + "api/departmentarea/",
-  Update: BASE_URL + "/api/departmentarea/",
-  Delete: BASE_URL + "api/departmentarea/",
-  GetPopulatedAreaDetail: BASE_URL + "api/departmentarea/parents/",
-}
-
-export const level = {
-  GetAll: BASE_URL + "/api/level/",
-  GetOne: BASE_URL + "api/level/",
-  Create: BASE_URL + "/api/level/",
-  Update: BASE_URL + "/api/level/",
-  GetPaginated: BASE_URL + "level",
-  GetChildernLevel: "level/children/",
-  Delete: BASE_URL + "api/level/",
-  levelnextlevel: BASE_URL + "/api/level/next/",
-  GetAllAreaLevel: BASE_URL + "parentlevel",
-  GetAllLevel: BASE_URL + "api/level/",
-  CreateLevelPosting: BASE_URL + "posting/update",
-  GetAllPostingByLevel: BASE_URL + "posting/getall/",
-  Getlevel: BASE_URL + "level",
-  MyLeave: BASE_URL + "my_leaves",
-}
-
-export const departmentLevel = {
-  GetAll: BASE_URL + "api/departmentlevel/",
-  GetOne: BASE_URL + "api/departmentlevel/",
-  Create: BASE_URL + "api/departmentlevel/",
-  Update: BASE_URL + "api/departmentlevel/",
-  GetPaginated: BASE_URL + "departmentlevel",
-  GetChildernLevel: "departmentlevel/children/",
-  Delete: BASE_URL + "api/departmentlevel/",
-  levelnextlevel: BASE_URL + "/api/departmentlevel/next/",
-  GetAllAreaLevel: BASE_URL + "departmentlevel",
-  GetAllLevel: BASE_URL + "api/departmentlevel/",
-  CreateLevelPosting: BASE_URL + "posting/update",
-  GetAllPostingByLevel: BASE_URL + "posting/getall/",
-  Getlevel: BASE_URL + "departmentlevel",
-  MyLeave: BASE_URL + "my_leaves",
-}
-
-export const requestType = {
-  GetAll: BASE_URL + "api/requesttype/all",
-  Create: BASE_URL + "api/requesttype",
-  Delete: BASE_URL + "api/requesttype/",
-  Update: BASE_URL + "api/requesttype/",
-  GetOne: BASE_URL + "api/requesttype/",
-}
-
-
-export const reachmeRequestType = {
-  GetAll: BASE_URL + "api/reachmerequesttype/all",
-  Create: BASE_URL + "api/reachmerequesttype/",
-  Delete: BASE_URL + "api/reachmerequesttype/",
-  Update: BASE_URL + "api/reachmerequesttype/",
-  GetOne: BASE_URL + "api/reachmerequesttype/",
-}
 
 
 export const district = {
@@ -113,13 +36,31 @@ export const taluk = {
   Update: BASE_URL + "taluk/",
   GetOne: BASE_URL + "taluk/",
 }
-export const station = {
-  GetAll: BASE_URL + "station",
-  GetAllWithOutPagination: BASE_URL + "station",
-  Create: BASE_URL + "station",
-  Delete: BASE_URL + "station/",
-  Update: BASE_URL + "station/",
-  GetOne: BASE_URL + "station/",
+export const category = {
+  GetAll: BASE_URL + "category",
+  GetAllWithOutPagination: BASE_URL + "category",
+  Create: BASE_URL + "category",
+  Delete: BASE_URL + "category/",
+  Update: BASE_URL + "category/",
+  GetOne: BASE_URL + "category/",
+}
+
+export const vendor = {
+  GetAll: BASE_URL + "vendor",
+  GetAllWithOutPagination: BASE_URL + "vendor",
+  Create: BASE_URL + "vendor",
+  Delete: BASE_URL + "vendor/",
+  Update: BASE_URL + "vendor/",
+  GetOne: BASE_URL + "vendor/",
+}
+
+export const State = {
+  GetAll: BASE_URL + "state",
+  GetAllWithOutPagination: BASE_URL + "state",
+  Create: BASE_URL + "state",
+  Delete: BASE_URL + "state/",
+  Update: BASE_URL + "state/",
+  GetOne: BASE_URL + "state/",
 }
 
 export const policeOfficer = {
