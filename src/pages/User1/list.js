@@ -101,9 +101,7 @@ function User() {
             setTotalCount(data.pagination.totalCount)
           } 
     }
-    const addBtnClick = () => {
-        toggleManageModal()
-    }
+    
     const HandleRowClicked = () => {
         alert("row")
     }
@@ -119,9 +117,8 @@ function User() {
     const toggleDeleteModal = () => {
         alert("Delete")
     }
-    const toggleManageModal = () => {
-        alert("Add")
-    }
+    
+    
     const handleSearch = () => {
         console.log("hi")
     }
@@ -131,7 +128,7 @@ function User() {
                 <div className="container-fluid">
                     <ListPageHeader
                         heading={"Home.User"}
-                        buttonClick={addBtnClick}
+                        showButton={false}
                         onTextChange={handleSearch}
                     />
                     <ListPage
