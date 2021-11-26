@@ -148,14 +148,40 @@ export const apimodule = {
   GetOne: BASE_URL + "api/apimodule/",
 }
 
-export const gender = {
-  GetAll: BASE_URL + "gender",
-  GetAllWithOutPagination: BASE_URL + "gender",
-  Create: BASE_URL + "gender",
-  Delete: BASE_URL + "gender/",
-  Update: BASE_URL + "gender/",
-  GetOne: BASE_URL + "gender/",
+export const category = {
+  GetAll: BASE_URL + "category",
+  GetAllWithOutPagination: BASE_URL + "category",
+  Create: BASE_URL + "category",
+  Delete: BASE_URL + "category/",
+  Update: BASE_URL + "category/",
+  GetOne: BASE_URL + "category/",
 }
+
+export const product = {
+  GetAll: BASE_URL + "product",
+  GetAllWithOutPagination: BASE_URL + "product",
+  Create: BASE_URL + "product",
+  Delete: BASE_URL + "product/",
+  Update: BASE_URL + "product/",
+  GetOne: BASE_URL + "product/",
+}
+export const cmscontent= {
+  GetAll: BASE_URL + "cmscontent",
+  GetAllWithOutPagination: BASE_URL + "cmscontent",
+  Create: BASE_URL + "cmscontent",
+  Delete: BASE_URL + "cmscontent/",
+  Update: BASE_URL + "cmscontent/",
+  GetOne: BASE_URL + "cmscontent/",
+}
+export const District= {
+  GetAll: BASE_URL + "district",
+  GetAllWithOutPagination: BASE_URL + "district",
+  Create: BASE_URL + "district",
+  Delete: BASE_URL + "district/",
+  Update: BASE_URL + "district/",
+  GetOne: BASE_URL + "district/",
+}
+
 
 export const leave = {
   Approve: BASE_URL + "leave/action",
