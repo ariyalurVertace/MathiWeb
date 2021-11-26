@@ -10,12 +10,20 @@ import Logout from "../pages/authentication/Logout"
 import ApiModule from "../pages/ApiModule/crud"
 import Role from "../pages/role/list"
 import Category from "../pages/Category/list"
+import Banner from "pages/Banner/list"
+import Product from "pages/Product/list"
+import Notification from "pages/Notification/list"
+import User from "pages/User1/list"
 
 const authProtectedRoutes = [
   { path: "/logout", component: Logout },
   { path: "/api-module", component: ApiModule },
   { path: "/role", component: Role },
   { path: "/category", component: Category },
+  { path: "/banner", component: Banner },
+  { path: "/product", component: Product },
+  { path: "/notification", component: Notification },
+  { path: "/user", component: User },
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },
 ]
 

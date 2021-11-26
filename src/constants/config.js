@@ -44,6 +44,38 @@ export const category = {
   Update: BASE_URL + "category/",
   GetOne: BASE_URL + "category/",
 }
+export const banner = {
+  GetAll: BASE_URL + "banner",
+  GetAllWithOutPagination: BASE_URL + "banner",
+  Create: BASE_URL + "banner",
+  Delete: BASE_URL + "banner/",
+  Update: BASE_URL + "banner/",
+  GetOne: BASE_URL + "banner/",
+}
+export const product = {
+  GetAll: BASE_URL + "product",
+  GetAllWithOutPagination: BASE_URL + "product",
+  Create: BASE_URL + "product",
+  Delete: BASE_URL + "product/",
+  Update: BASE_URL + "product/",
+  GetOne: BASE_URL + "product/",
+}
+export const notification = {
+  GetAll: BASE_URL + "notification",
+  GetAllWithOutPagination: BASE_URL + "notification",
+  Create: BASE_URL + "notification",
+  Delete: BASE_URL + "notification/",
+  Update: BASE_URL + "notification/",
+  GetOne: BASE_URL + "notification/",
+}
+export const user = {
+  GetAll: BASE_URL + "user",
+  GetAllWithOutPagination: BASE_URL + "user",
+  Create: BASE_URL + "user",
+  Delete: BASE_URL + "user/",
+  Update: BASE_URL + "user/",
+  GetOne: BASE_URL + "user/",
+}
 
 export const policeOfficer = {
   GetAccessibleRules: BASE_URL + "rules",
