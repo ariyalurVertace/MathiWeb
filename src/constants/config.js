@@ -319,6 +319,21 @@ export const role = {
   Update: BASE_URL + "api/role/",
   GetOne: BASE_URL + "api/role/",
 }
+
+export const category = {
+  GetAll: BASE_URL + "api/category/",
+  Create: BASE_URL + "api/category/",
+  Delete: BASE_URL + "api/category/",
+  Update: BASE_URL + "api/category/",
+  GetOne: BASE_URL + "api/category/",
+}
+export const product = {
+  GetAll: BASE_URL + "api/product/",
+  Create: BASE_URL + "api/product/",
+  Delete: BASE_URL + "api/product/",
+  Update: BASE_URL + "api/product/",
+  GetOne: BASE_URL + "api/product/",
+}
 export const apimoduleroleaccess = {
   GetOne: BASE_URL + "api/apimoduleroleaccess/",
   Create: BASE_URL + "api/apimoduleroleaccess/",

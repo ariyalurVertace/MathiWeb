@@ -5,7 +5,7 @@ import { Link, withRouter } from "react-router-dom"
 import LoginCarousel from "../../components/Common/LoginCarousel"
 
 // import images
-import logo from "../../assets/images/Daco_5185090.png"
+import logo from "../../assets/images/mathi.jpg"
 import { Formik, Form, Field } from "formik"
 
 import { loginValidation } from "../../helpers/validations"
@@ -132,7 +132,7 @@ class Login extends Component {
                           />
                         </Link>
                         <h3 className="pt-3" style={{ textAlign: "center" }}>
-                          Police - Central Zone{" "}
+                          MATHI{" "}
                         </h3>
                       </div>
                       <div className="my-auto">
