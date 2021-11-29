@@ -8,3 +8,4 @@ services:
     ports:
       - "${PORT}:80"
     network_mode: "bridge"
+ 

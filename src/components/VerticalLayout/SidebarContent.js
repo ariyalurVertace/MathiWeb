@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
 import React, { Component } from "react"
 
 //Simple bar
-import SimpleBar from "simplebar-react"
 
 // MetisMenu
 import MetisMenu from "metismenujs"
@@ -11,10 +10,8 @@ import { withRouter } from "react-router-dom"
 //i18n
 // import { withNamespaces } from "react-i18next";
 
-
-import { menu } from "../../constants/menu";
-import { Link } from "react-router-dom";
-
+import { menu } from "../../constants/menu"
+import { Link } from "react-router-dom"
 
 class SidebarContent extends Component {
   constructor(props) {
@@ -109,10 +106,10 @@ class SidebarContent extends Component {
   render() {
     return (
       <React.Fragment>
-         <div id="sidebar-menu">
+        <div id="sidebar-menu">
           <ul className="metismenu list-unstyled" id="side-menu">
             {/* <li className="menu-title">{this.props.t('Menu')}</li> */}
-            {menu.map((m) => {
+            {menu.map(m => {
               return (
                 <li>
                   <Link
@@ -136,12 +133,12 @@ class SidebarContent extends Component {
                           <li key={i}>
                             <Link to={sm.to}>{sm.label}</Link>
                           </li>
-                        );
+                        )
                       })}
                     </ul>
                   )}
                 </li>
-              );
+              )
             })}
           </ul>
         </div>

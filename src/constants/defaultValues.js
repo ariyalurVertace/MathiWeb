@@ -1,5 +1,3 @@
-import { posting } from "./config";
-
 export const MethodType = {
   GET: "GET",
   POST: "POST",
@@ -7,7 +5,7 @@ export const MethodType = {
   PUT: "PUT",
   DELETE: "DELETE",
   FORMDATA: "FORMDATA",
-};
+}
 
 export const StatusCodes = {
   Error: "500",
@@ -19,212 +17,45 @@ export const StatusCodes = {
   NotAllowed: "405",
   NotFound: "404",
   Duplicate: "409",
-};
-
-export const GoogleAPIKey = "AIzaSyCVY8hRJ-X4VVYVuDECrRQynxwvuk6Kgow";
-
+}
 
 export const masterListPageTableTheme = {
   rows: {
     height: "20px",
     cursor: "pointer !important",
   },
-};
+}
 
-export const defaultPageSizeOptions = [
-  10, 25, 50, 100
-];
+export const defaultPageSizeOptions = [10, 25, 50, 100]
 
-export const defaultPageLimit = 10;
+export const defaultPageLimit = 10
 
-export const dateFormat = "dd/MM/yyyy";
+export const dateFormat = "dd/MM/yyyy"
 
 export const PasswordRegex = ""
-export const DeleteStatus = {
-  deletestatus: true
-};
-export const PoliceOfficerRoles = {
-  Admin: "5fd72adc8b898552935d2d68",
-  JC: "5fd72afc8b898552935d2d69",
-  DC: "5fd72b0e8b898552935d2d6a",
-  AC: "5fd72b178b898552935d2d6b",
-  Ins: "5fd72b2b8b898552935d2d6c",
-  SI: "5fd72b328b898552935d2d6d",
-  HC: "5fd72b428b898552935d2d6e",
-  Grade1: "5fd72b588b898552935d2d6f",
-  Grade2: "5fd72b5c8b898552935d2d70",
-  SSI: "5fd72c846efe3b56d663d3c7",
-  C: "6037b58bab7e970b2df89001",
-};
-export const dayMilliSeconds = 86399; //value-1 to avoid next day
+
+export const dayMilliSeconds = 86399 //value-1 to avoid next day
 
 export const ModulesName = {
-
-  police: "Police / Officer",
-  station: "Station / Office",
-  AddStationOffice: "Add Station / Office",
-  UpdateStationOffice: "Update Station / Office",
-  Level: "Level",
-  Area: "Area",
-  Feedback: "Feedback",
-  FeedbackType: "Feedback Type",
-  OfficeType: "Office Type",
-  UpdateOfficeType: "Update Office Type",
-  DeleteDesignation: "Delete Designation",
-  AddOfficeType: "Add Office Type",
-  Type: "Type",
-  DepartmentDesignation: "Department Designation",
-  Apimodule: "API Module",
-  eBeat: "E-Beat Location",
-  Designation: "Designation",
-  UpdateDesignation: "Update Designation",
-  AddDesignation: "Add Designation",
-
-
-  ebeatLocationType: "E-Beat Location Type",
   Role: "Role",
-  Request: "Request Type",
-  Department: "Department",
-  StationDetail: "Station / Office List",
-  DepartmentLevel: "Department Level",
-  DepartmentArea: "Department Area",
-  OfficeList: "Office List",
   Home: "Home",
-  DepartmentDetail: "Department Details",
-  DepartmentArea: "Department Area",
-  ReachmeRequest: "ReachMe Request Type",
   View: "View",
   Edit: "Edit",
   Delete: "Delete",
   Add: "Add",
-  Zone: "Zone",
-  AddStation: "Add Station",
-  DeleteStationOffice: "Delete Station / Office",
   DeleteContent: "Are you sure you want to delete this",
   Yes: "Yes",
   No: "No",
   Name: "Name",
   Update: "Update",
   Cancel: "Cancel",
-  Address: "Address",
-  ViewOffice: "View Office",
-  Expandall: "Expand All",
-  Collapseall: "Collapse All",
-  DeleteLevel: "Delete Level",
-  Postings: "Postings",
-  Posting: "Posting",
-  PostingValidation: "Posting is required",
-  DeleteState: "Delete State",
-  State: "State",
-  MandatoryFields: "Mandatory Fields",
-  Stations: "Stations",
   Back: "Back",
-  ValidName: "Name is required",
-  ValidLevel: "Please select valid Level",
-  DeleteOfficeType: "Delete Office Type",
   DeleteApiModule: "Delete API Module",
-  Rank: "Rank",
   UpdateApiModule: "Update API Module",
   AddApiModule: "Add API Module",
-  Route: "Route",
   MappingAPIModule: "Mapping API Module",
   DeleteRole: "Delete Role",
   UpdateRole: "Update Role",
   AddRole: "Add Role",
-  ViewFeedBackDetails: "View FeedBack Details",
-  DeletePoliceOfficer: "Delete Police / Officer",
-  ImageView: "Image View",
   Close: "Close",
-  DeleteFeedbackType: "Delete Feedback Type",
-  UpdateFeedbackType: "Update Feedback Type",
-  AddFeedbackType: "Add Feedback Type",
-  Download: "Download PDF",
-  DeleteEBeatLocation: "Delete E-Beat Location",
-  UpdateEBeatLocation: "Update E-Beat Location",
-  AddEBeatLocation: "Add E-Beat Location",
-  DeleteEBeatLocationType: "Delete E-Beat Location Type",
-  UpdateEBeatLocationType: "Update E-Beat Location Type",
-  AddEBeatLocationType: "Add E-Beat Location Type",
-  Description: "Description",
-  CreateNewRequestType: "Create New Request Type",
-  DeleteDepartment: "Delete Department",
-  UpdateDepartment: "Update Department",
-  AddDepartment: "Add Department",
-  DeleteDepartmentDesignation: "Delete Department Designation",
-  UpdateDepartmentDesignation: "Update Department Designation",
-  AddDepartmentDesignation: "Add Department Designation",
-  PostingDetails: "Posting Details",
-  AddPosting: "Add Posting",
-  OfficerSearch: "Officer Search",
-  DeletePosting: "Delete Posting",
-  Posting: "Posting",
-  UpdatePosting: "Update Posting",
-  AddPosting: 'Add Posting',
-  DeleteDepartmentLevel: "Delete Department Level",
-  requiredName: "Name is Required",
-  ValidLevel: "Please select valid Level",
-  CreateNewDepartmentLevel: "Create New Department Level",
-  Email: "Email Id",
-  MobileNumber1: "Mobile Number 1",
-  MobileNumber2: "Mobile Number 2",
-  MobileNumber: "Mobile Number",
-  UpdatePoliceOfficer: "Update Police / Officer",
-  AddPoliceOfficer: "Add Police / Officer",
-  Place: "Place",
-  Gender: "Gender",
-  ViewDetails: "View Details",
-  PoliceOfficerDetails: "Police / Officer Details",
-
-  levelName: "Level Name",
-  Ash: "#",
-  Star: "*",
-  LevelName: "Level Name is required",
-  DepartmentRequired: "Department is required",
-  RequestType: "Request Type",
-  MapDepartmentsto: "Map Departments to ",
-  DepartmentImage: "Department Image",
-  AttachDepartmentImage: "Attach Department Image",
-  AddNewDepartmentLevel: "Add New Department Level",
-  EditDepartmentLevelUnder: "Edit Department Level",
-  AddDepartmentLevel: "Add Department Level",
-  AddDepartmentLevelUnder: "Add Department Level Under",
-  ColorCode: "Color Code",
-  Default: "Default",
-  Active: "Active",
-  Entity: "Entity",
-  UpdateEntityState: "Update Entity State",
-  AddEntityState: "Add Entity State",
-  EntityState: "Entity State",
-  DeleteEntityState: "Delete Entity State",
-  Leave: "Leave",
-  Leaveson: "Leaves on",
-  History: "History",
-  Approved: "Approved",
-  Loading: "Loading...",
-  thisleaveapplication: "this leave application",
-  LeaveApplication: "Leave Application",
-  Apply: "Apply",
-  EditLevelUnder: "Edit Level Under",
-  AddLevelUnder: "Add Level Under",
-  IsActive: "Is Active",
-  RoomNumberName: "Room Number / Name",
-  BuildingBlockFloor: "Building / Block / Floor",
-  UpdateLocation: "Update Location",
-  AddLocation: "Add Location",
-  Location: "Location",
-  DeleteLocation: "Delete Location",
-  EditDepartmentLevel: "Edit Department Level",
-  AddDepartmentLevelunder: "Add Department Level Under",
-  AddNewRequestType: "Add New Request Type",
-  PinCode: "Pin Code",
-  AddressLine1: "Address Line 1",
-  AddressLine2: "Address Line 2",
-  AddressLine3: "Address Line 3",
-  PhoneNumber: "Phone Number",
-  UpdateStation: "Update Station",
-  AddStation: "Add Station",
-  Station: "Station",
-  DeleteStation: "Delete Station",
-  AddLevel: "Add Level",
-
-};
+}
