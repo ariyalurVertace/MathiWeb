@@ -42,6 +42,27 @@ export const apimodule = {
   GetOne: BASE_URL + "api/apimodule/",
 }
 
+
+export const product = {
+  GetAll: BASE_URL + "product",
+  GetAllWithOutPagination: BASE_URL + "product",
+  Create: BASE_URL + "product",
+  Delete: BASE_URL + "product/",
+  Update: BASE_URL + "product/",
+  GetOne: BASE_URL + "product/",
+}
+
+export const cmscontent= {
+  GetAll: BASE_URL + "cmscontent",
+  GetAllWithOutPagination: BASE_URL + "cmscontent",
+  Create: BASE_URL + "cmscontent",
+  Delete: BASE_URL + "cmscontent/",
+  Update: BASE_URL + "cmscontent/",
+  GetOne: BASE_URL + "cmscontent/",
+}
+export const fileUpload = {
+  upload: "api/fileupload/",
+}
 export const role = {
   GetAll: BASE_URL + "api/role/",
   Create: BASE_URL + "api/role/",
@@ -61,14 +82,6 @@ export const banner = {
   Delete: BASE_URL + "banner/",
   Update: BASE_URL + "banner/",
   GetOne: BASE_URL + "banner/",
-}
-export const product = {
-  GetAll: BASE_URL + "product",
-  GetAllWithOutPagination: BASE_URL + "product",
-  Create: BASE_URL + "product",
-  Delete: BASE_URL + "product/",
-  Update: BASE_URL + "product/",
-  GetOne: BASE_URL + "product/",
 }
 export const notification = {
   GetAll: BASE_URL + "notification",

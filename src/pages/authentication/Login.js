@@ -7,7 +7,6 @@ import LoginCarousel from "../../components/Common/LoginCarousel"
 // import images
 import logo from "../../assets/images/logo.png"
 import { Formik, Form, Field } from "formik"
-
 import { loginValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 import { setItemOnLocalStorage } from "../../helpers/utils"
@@ -193,3 +192,4 @@ Login.propTypes = {
 }
 
 export default withRouter(Login)
+
