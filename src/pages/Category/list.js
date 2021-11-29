@@ -37,7 +37,8 @@ function Category() {
             selector: "name",
             sortable: false,
             cell: row => <span>{row.name ? row.name : ""}</span>,
-        }, {
+        }, 
+        {
             name: "Description",
             selector: "description",
             sortable: false,
