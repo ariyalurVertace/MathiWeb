@@ -11,11 +11,13 @@ import ApiModule from "../pages/ApiModule/crud"
 import Role from "../pages/role/list"
 import Category from "../pages/Category/list"
 import Banner from "pages/Banner/list"
-import Product from "pages/product/list"
+import Product from "pages/Product/list"
 import Notification from "pages/Notification/list"
 import User from "pages/User/list"
 import cmscontent from "../pages/Cmscontent/cms"
 import district  from "../pages/district/dis"
+import Vendor from "../pages/Vendor/list"
+import State from "../pages/State/list"
 
 const authProtectedRoutes = [
  
@@ -28,8 +30,12 @@ const authProtectedRoutes = [
   { path: "/product", component: Product },
   { path: "/notification", component: Notification },
   { path: "/user", component: User },
-  { path: "/", exact: true, component: () => <Redirect to="/category" /> },
   { path: "/role", component: Role },
+  { path: "/", exact: true, component: () => <Redirect to="/category" /> },
+
+ { path: "/vendor", component: Vendor },
+ { path: "/state", component: State },
+ 
 ]
 
 const publicRoutes = [

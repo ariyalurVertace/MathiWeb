@@ -34,6 +34,16 @@ export const categories = {
   GetOne: BASE_URL + "category/",
 }
 
+export const vendor = {
+  GetAll: BASE_URL + "vendor",
+  GetAllWithOutPagination: BASE_URL + "vendor",
+  Create: BASE_URL + "vendor",
+  Delete: BASE_URL + "vendor/",
+  Update: BASE_URL + "vendor/",
+  GetOne: BASE_URL + "vendor/",
+}
+
+
 export const apimodule = {
   GetAll: BASE_URL + "api/apimodule/",
   Create: BASE_URL + "api/apimodule/",
