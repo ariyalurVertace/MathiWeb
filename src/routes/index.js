@@ -13,7 +13,7 @@ import Category from "../pages/Category/list"
 import Banner from "pages/Banner/list"
 import Product from "pages/Product/list"
 import Notification from "pages/Notification/list"
-import User from "pages/User1/list"
+import User from "pages/User/list"
 
 const authProtectedRoutes = [
   { path: "/logout", component: Logout },
@@ -24,7 +24,7 @@ const authProtectedRoutes = [
   { path: "/product", component: Product },
   { path: "/notification", component: Notification },
   { path: "/user", component: User },
-  { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },
+  { path: "/", exact: true, component: () => <Redirect to="/category" /> },
 ]
 
 const publicRoutes = [

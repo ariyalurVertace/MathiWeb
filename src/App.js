@@ -20,14 +20,20 @@ import PageMaintenance from "./pages/utility/page-maintenance"
 
 import { ENABLE_MAINTENANCE_MODE } from "./constants/config"
 
-function App(props){
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.getLayout = this.getLayout.bind(this)
+  }
+
   /**
    * Returns the layout
    */
-  const getLayout = () => {
+  getLayout = () => {
     let layoutCls = VerticalLayout
 
-    switch (props.layout.layoutType) {
+    switch (this.props.layout.layoutType) {
       case "horizontal":
         layoutCls = HorizontalLayout
         break
@@ -38,14 +44,16 @@ function App(props){
     return layoutCls
   }
 
-    const Layout = getLayout()
+  componentDidMount() {}
+
+  render() {
+    const Layout = this.getLayout()
 
     return (
       <React.Fragment>
         {!ENABLE_MAINTENANCE_MODE ? (
           <Router>
             <Switch>
-
               {publicRoutes.map((route, idx) => (
                 <AppRoute
                   path={route.path}
@@ -66,8 +74,7 @@ function App(props){
                   exact
                 />
               ))}
-            <Route component={Page404} />
-
+              <Route component={Page404} />
             </Switch>
           </Router>
         ) : (
@@ -76,6 +83,7 @@ function App(props){
       </React.Fragment>
     )
   }
+}
 
 const mapStateToProps = state => {
   return {
