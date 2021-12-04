@@ -64,6 +64,12 @@ export const DepartmentDesignationValidation = Yup.object().shape({
     .required(Message("Rank.required"))
   ,
 })
+export const stateValidation = Yup.object().shape({
+  name: Yup.string().required(Message("Name.required")),
+})
+export const userValidation = Yup.object().shape({
+  name: Yup.string().required(Message("Name.required")),
+})
 export const roleValidation = Yup.object().shape({
   Name: Yup.string().required(Message("Name.required")),
 })

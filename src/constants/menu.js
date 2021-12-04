@@ -1,56 +1,16 @@
 export const menu = [
   {
-    id: "police ",
-    icon: "bx bx-user",
-    label: "Police Master",
-    to: "/",
-    subs: [
-
-      // {
-      //   id: "police",
-      //   icon: "bx bx-user",
-      //   label: "Police / Officer",
-      //   to: "/policeofficer",
-      //   badge: "no",
-      // },
-      {
-        id: "Station",
-        icon: "bx bx-building",
-        label: "Station / Office",
-        to: "/police-station",
-        badge: "no",
-      },
-      {
-        id: "level",
-        icon: "bx bx-list-ol",
-        label: "Level",
-        to: "/level",
-        badge: "no",
-      },
-      {
-        id: "area",
-        icon: "bx bx-map-alt",
-        label: "Area",
-        to: "/area-manage",
-        badge: "no",
-      },
-      {
-        id: "officetype",
-        icon: "fas fa-file",
-        label: "Office Type",
-        to: "/office-type",
-        badge: "no",
-      },
-
-      {
-        id: "Designation",
-        icon: "fas fa-briefcase",
-        label: "Designation",
-        to: "/designation",
-        badge: "no",
-      },
-
-    ]
+    id: "user",
+    icon: "bx bx-user-circle",
+    label: "user",
+    to: "/user",
+    badge: "no",
+  },{
+    id: "state",
+    icon: "bx bx-globe",
+    label: "state",
+    to: "/state",
+    badge: "no",
   },
   {
     id: "System",
