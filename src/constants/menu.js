@@ -18,6 +18,19 @@ export const menu = [
     badge: "no",
   },
   {
+    id: "cmscontent",
+    icon: "bx bx-happy-heart-eyes",
+    label: "Cmscontent",
+    to: "/cmscontent",
+    badge: "no",
+  },{
+    id: "district",
+    icon: "bx bx-landscape",
+    label: "District",
+    to: "/district",
+    badge: "no",
+  },
+  {
     id: "banner",
     icon: "bx bx-tv",
     label: "Banner",
