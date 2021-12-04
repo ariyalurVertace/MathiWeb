@@ -59,7 +59,7 @@ function CategoryAddEditModal(props) {
                     )}
                   </FormGroup>
                 </Col>
-                <Col xs="12" sm="12" md="12" lg="12">
+                <Col xs="6" sm="6" md="6" lg="6">
                   <FormGroup className="form-group has-float-label">
                     <DropDown
                       className="react-select"

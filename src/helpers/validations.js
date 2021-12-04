@@ -23,3 +23,7 @@ export const ApiModuleValidation = Yup.object().shape({
 export const ForgotPasswordValidation = Yup.object().shape({
   Username: Yup.string().required(Message("username.required")),
 })
+export const vendorValidation = Yup.object().shape({
+  firstName: Yup.string().required("First Name is required"),
+  phonenumber:Yup.string().required("Phone Number is required"),
+})

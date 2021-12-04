@@ -6,4 +6,12 @@ export const menu = [
     to: "/category",
     badge: "no",
   },
+
+  {
+    id: "vendor",
+    icon: "bx bx-share-alt",
+    label: "Vendor",
+    to: "/vendor",
+    badge: "no",
+  },
 ]

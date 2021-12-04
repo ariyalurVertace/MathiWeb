@@ -82,7 +82,7 @@ class ListPageHeader extends Component {
                   className="float-right"
                   onClick={() => buttonClick()}
                 >
-                  {buttonText ? buttonText : "Add New"}
+                  {buttonText ? buttonText : "Add Vendor"}
                 </Button>
               )}
             </div>
