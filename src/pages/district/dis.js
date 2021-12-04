@@ -24,25 +24,26 @@ import {
     defaultPageLimit,
     ModulesName,
 } from "../../constants/defaultValues"
-import { banner} from "../../constants/config"
+import { district } from "../../constants/config"
 import ListPage from "../../components/custom/ListPage"
 import ListPageHeader from "../../components/custom/ListPageHeader"
 import { ApiModuleValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 
-function Banner() {
+function District() {
     const columns = [
         {
             name: "Name",
             selector: "name",
             sortable: false,
             cell: row => <span>{row.name ? row.name : ""}</span>,
-        }, {
-            name: "Description",
-            selector: "description",
+        }, 
+        {
+            name: " State",
+            selector: " state",
             sortable: false,
-            cell: row => <span>{row.description ? row.description : ""}</span>,
-        },
+            cell: row => <span>{row.state ? row.state : ""}</span>,
+        }, 
         {
             name: "Action",
             selector: "_id",
@@ -58,7 +59,6 @@ function Banner() {
                         >
                             Edit
                         </Button>
-
                         <Button
                             outline
                             color="danger"
@@ -67,24 +67,26 @@ function Banner() {
                         >
                             Delete
                         </Button>
+
+                        
                     </ButtonGroup>
                 </Row>
             ),
         },
     ]
-    const [bannerList, setCategoryList] = useState([{name:"testing",description:"xdfsdxa"}]);
+    const [districtList, setCategoryList] = useState([{name:"Ariyalur",state:"Tamil Nadu"}]);
     const [listRequestModel, setListRequestModel] = useState([]);
     const keyField = "id"
     const [totalCount, setTotalCount] = useState(0);
     const [totalPage, setTotalPage] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        getAllbanner();
+        getAllCategories();
     }, []);
-    const getAllbanner = () => {
+    const getAllCategories = () => {
         alert("1")
         CallService(
-            banner.GetAll,
+            district.GetAll,
             MethodType.POST,
             false,
             listRequestModel,
@@ -129,13 +131,13 @@ function Banner() {
             <div className="page-content">
                 <div className="container-fluid">
                     <ListPageHeader
-                        heading={"Home.Banner"}
+                        heading={"Home.district"}
                         buttonClick={addBtnClick}
                         onTextChange={handleSearch}
                     />
                     <ListPage
                         columns={columns}
-                        data={bannerList}
+                        data={districtList}
                         keyField={keyField}
                         totalCount={totalCount}
                         rowClicked={HandleRowClicked}
@@ -150,4 +152,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default District

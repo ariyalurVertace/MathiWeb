@@ -25,7 +25,7 @@ class ListPageHeader extends Component {
     var code = event.keyCode || event.which
     if (code === 13) {
       //13 is the enter keycode
-      this.props.buttonClick()
+      // this.props.buttonClick()
     }
   }
   render() {
@@ -54,7 +54,7 @@ class ListPageHeader extends Component {
                 ""
               ) : (
                 <div
-                  style={{ marginTop: "-4%" }}
+                  style={{ marginTop: "-5%" }}
                   className="app-search mr-2 d-none float-left d-lg-block"
                 >
                   <div className="position-relative">

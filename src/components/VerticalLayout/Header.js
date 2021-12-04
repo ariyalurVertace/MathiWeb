@@ -5,16 +5,17 @@ import { connect } from "react-redux"
 
 import { Link } from "react-router-dom"
 
+// Reactstrap
+
 // Import menuDropdown
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
 import logo from "../../assets/images/logo.svg"
-import logoLightPng from "../../assets/images/Daco_5185090.png"
-import logoLightSvg from "../../assets/images/Daco_5185090.png"
-import logoDark from "../../assets/images/logo1.png"
+import logoLightPng from "../../assets/images/logo.png"
+import logoDark from "../../assets/images/logo.png"
 
 //i18n
-//import { withTranslation } from "react-i18next"
+import { withTranslation } from "react-i18next"
 
 // Redux Store
 import { toggleRightSidebar } from "../../store/actions"
@@ -79,19 +80,19 @@ class Header extends Component {
               <div className="navbar-brand-box">
                 <Link to="/" className="logo logo-dark">
                   <span className="logo-sm">
-                    <img src={logo} alt="" height="22" />
+                    <img src={logo} alt="" height="35" />
                   </span>
                   <span className="logo-lg">
-                    <img src={logoDark} alt="" height="17" />
+                    <img src={logoDark} alt="" height="50" />
                   </span>
                 </Link>
 
-                <Link to="/" className="logo logo-light">
+                <Link to="/" className="logo logo-light mt-2">
                   <span className="logo-sm">
-                    <img src={logoLightSvg} alt="" height="22" />
+                    <img src={logoLightPng} alt="" height="35" />
                   </span>
                   <span className="logo-lg ">
-                    <img src={logoLightPng} alt="" height="69" />
+                    <img src={logoLightPng} alt="" height="50" />
                   </span>
                 </Link>
               </div>
@@ -106,71 +107,7 @@ class Header extends Component {
               </button>
             </div>
             <div className="d-flex">
-              <div className="dropdown d-inline-block d-lg-none ml-2">
-                <button
-                  onClick={() => {
-                    this.setState({ isSearch: !this.state.isSearch })
-                  }}
-                  type="button"
-                  className="btn header-item noti-icon waves-effect"
-                  id="page-header-search-dropdown"
-                >
-                  <i className="mdi mdi-magnify"></i>
-                </button>
-                <div
-                  className={
-                    this.state.isSearch
-                      ? "dropdown-menu dropdown-menu-lg dropdown-menu-right p-0 show"
-                      : "dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
-                  }
-                  aria-labelledby="page-header-search-dropdown"
-                >
-                  <form className="p-3">
-                    <div className="form-group m-0">
-                      <div className="input-group">
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Search ..."
-                          aria-label="Recipient's username"
-                        />
-                        <div className="input-group-append">
-                          <button className="btn btn-primary" type="submit">
-                            <i className="mdi mdi-magnify"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              {/* <LanguageDropdown /> */}
-
-              <div className="dropdown d-none d-lg-inline-block ml-1">
-                <button
-                  type="button"
-                  onClick={this.toggleFullscreen}
-                  className="btn header-item noti-icon waves-effect"
-                  data-toggle="fullscreen"
-                >
-                  <i className="bx bx-fullscreen"></i>
-                </button>
-              </div>
-
               <ProfileMenu />
-
-              {/* <div
-                onClick={this.toggleRightbar}
-                className="dropdown d-inline-block"
-              >
-                <button
-                  type="button"
-                  className="btn header-item noti-icon right-bar-toggle waves-effect"
-                >
-                  <i className="bx bx-cog bx-spin"></i>
-                </button>
-              </div> */}
             </div>
           </div>
         </header>
@@ -184,7 +121,9 @@ const mapStatetoProps = state => {
   return { layoutType }
 }
 
-export default connect(mapStatetoProps, { toggleRightSidebar })(Header)
+export default connect(mapStatetoProps, { toggleRightSidebar })(
+  withTranslation()(Header)
+)
 
 Header.propTypes = {
   t: PropTypes.any,
