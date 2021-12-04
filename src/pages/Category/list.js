@@ -60,6 +60,11 @@ function Category() {
       name: "Testing",
       parentCategory: { id: 1, name: "Test", parentCategory: null },
     },
+    {
+      id: 2,
+      name: "testing2",
+      parentCategory: { id: 2, name: "testing2", parentCategory: null },
+    },
   ])
   const [category, setCategory] = useState({
     id: "",

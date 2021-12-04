@@ -8,7 +8,18 @@ export const loginValidation = Yup.object().shape({
   // .matches(/^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/, Message("password.invalid"))
 })
 export const categoryValidation = Yup.object().shape({
-  name: Yup.string().required(Message("Name.required")),
+  name: Yup.string().required("Name is required"),
+})
+export const bannerValidation = Yup.object().shape({
+  name: Yup.string().required("Name is required"),
+  image: Yup.string().required("Image is required"),
+})
+export const productValidation = Yup.object().shape({
+  name: Yup.string().required("Name is required"),
+  price: Yup.string().required("Price is required"),
+  stock: Yup.string().required("Stock is required"),
+  category: Yup.string().required("Category is required"),
+  image: Yup.string().required("Image is required"),
 })
 export const roleValidation = Yup.object().shape({
   name: Yup.string().required(Message("Name.required")),

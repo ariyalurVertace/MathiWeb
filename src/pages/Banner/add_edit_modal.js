@@ -13,12 +13,12 @@ import {
   Input,
 } from "reactstrap"
 import DropDown from "../../components/custom/DropDown"
-import { categoryValidation } from "../../helpers/validations"
+import { bannerValidation } from "../../helpers/validations"
 
-function CategoryAddEditModal(props) {
+function BannerAddEditModal(props) {
   const formik = useFormik({
-    initialValues: props.category,
-    validationSchema: categoryValidation,
+    initialValues: props.banner,
+    validationSchema: bannerValidation,
     onSubmit: values => {
       props.handleSubmit(values)
     },
@@ -32,9 +32,9 @@ function CategoryAddEditModal(props) {
       toggle={props.toggleManageModal}
     >
       <ModalHeader toggle={props.toggleManageModal}>
-        {props.category && props.category.id
-          ? "Update Category"
-          : "Add Category"}
+        {props.banner && props.banner.id
+          ? "Update banner"
+          : "Add banner"}
       </ModalHeader>
 
       <form onSubmit={formik.handleSubmit}>
@@ -60,39 +60,46 @@ function CategoryAddEditModal(props) {
                   </FormGroup>
                 </Col>
                 <Col xs="12" sm="12" md="12" lg="12">
-                  <FormGroup className="form-group has-float-label">
-                    <DropDown
-                      className="react-select"
-                      classNamePrefix="react-select"
-                      label="Parent Category"
-                      name="parentCategory"
-                      MobcolSplit={12}
-                      isClearable
-                      labelClassName=""
-                      isSearchable
-                      options={props.categoryList}
-                      value={
-                        formik.values &&
-                        formik.values.parentCategory &&
-                        (typeof formik.values.parentCategory === "object"
-                          ? props.categoryList.find(
-                              r => r.value === formik.values.parentCategory.id
-                            )
-                          : props.categoryList.find(
-                              r => r.value === formik.values.parentCategory
-                            ))
-                      }
+                 <FormGroup className="form-group has-float-label">
+                    <Label >Description</Label>
+                    <Input
+                      className="form-control"
+                      name="description"
+                      type="text"
+                      value={formik.values.description}
+                      onChange={formik.handleChange}
                      
-                    />
-                  </FormGroup>
+                     
+                   />
+                     </FormGroup>
                 </Col>
+                <Col xs="6" sm="6" md="6" lg="6">
+                 <FormGroup className="form-group has-float-label">
+                 <Label className="requiredField">Image</Label>
+                    <Input
+                      className="form-control"
+                      name="image"
+                      type="file"
+                      value={formik.values.image}
+                      onChange={formik.handleChange}
+                    />
+                     {formik.errors.image && (
+                      <div className="invalid-feedback d-block">
+                        {formik.errors.image}
+                      </div>
+                    )}
+                      
+                    
+                 </FormGroup>
+                </Col>
+                
               </Row>
             </Fragment>
           </ModalBody>
 
           <ModalFooter>
             <FormGroup className="float-sm-right ">
-              {props.category?.id ? (
+              {props.banner?.id ? (
                 <Button
                   className={`btn-shadow btn-multiple-state ${
                     props.buttonAction ? "disabled show-spinner " : ""
@@ -141,4 +148,4 @@ function CategoryAddEditModal(props) {
   )
 }
 
-export default CategoryAddEditModal
+export default BannerAddEditModal
