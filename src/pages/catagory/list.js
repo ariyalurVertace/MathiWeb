@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, Fragment } from "react"
 import { useFormik, useField, Field } from "formik"
 import { withRouter } from "react-router-dom"
@@ -98,7 +99,7 @@ function Category() {
             setTotalPage(data.pagination.totalCount / data.pagination.pageLimit)
             setCategoryList(data.result)
             setTotalCount(data.pagination.totalCount)
-          } 
+          }
     }
     const addBtnClick = () => {
         toggleManageModal()

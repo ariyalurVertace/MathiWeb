@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, Fragment } from "react"
 import { useFormik, useField, Field } from "formik"
 import { withRouter } from "react-router-dom"
@@ -24,24 +25,31 @@ import {
     defaultPageLimit,
     ModulesName,
 } from "../../constants/defaultValues"
-import { category } from "../../constants/config"
+import { user } from "../../constants/config"
 import ListPage from "../../components/custom/ListPage"
 import ListPageHeader from "../../components/custom/ListPageHeader"
 import { ApiModuleValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 
-function Category() {
+function User() {
     const columns = [
         {
             name: "Name",
             selector: "name",
             sortable: false,
             cell: row => <span>{row.name ? row.name : ""}</span>,
-        }, {
-            name: "Description",
-            selector: "description",
+        },    
+        {
+            name: "Phoneno",
+            selector: "phoneno",
             sortable: false,
-            cell: row => <span>{row.description ? row.description : ""}</span>,
+            cell: row => <span>{row.phoneno ? row.phoneno : ""}</span>,
+        }, 
+        {
+            name: "Address",
+            selector: "address",
+            sortable: false,
+            cell: row => <span>{row.address ? row.address : ""}</span>,
         },
         {
             name: "Action",
@@ -50,77 +58,67 @@ function Category() {
             cell: row => (
                 <Row>
                     <ButtonGroup className="mb-2" style={{ top: "4px" }}>
-                        <Button
+                    <Button
                             outline
-                            color="primary"
+                            color="info"
                             className="mobileViewFont"
-                            onClick={() => handleEdit(row)}
+                            onClick={() => handleView(row)}
                         >
-                            Edit
+                            View details
                         </Button>
 
-                        <Button
-                            outline
-                            color="danger"
-                            className="mobileViewFonts pl-1 pr-1 ml-2"
-                            onClick={() => toggleDeleteModal(row)}
-                        >
-                            Delete
-                        </Button>
+                     
                     </ButtonGroup>
                 </Row>
             ),
         },
     ]
-    const [categoryList, setCategoryList] = useState([{name:"testing",description:"xdfsdxa"}]);
+    const [userList, setUserList] = useState([{name:"karan",phoneno:"8012261027",address:"Ariyalur"},{name:"bharathi",phoneno:"785847589",address:"Ariyalur"},{name:"Selva kumar",phoneno:"989847589",address:"Ariyalur"}]);
     const [listRequestModel, setListRequestModel] = useState([]);
     const keyField = "id"
     const [totalCount, setTotalCount] = useState(0);
     const [totalPage, setTotalPage] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        getAllCategories();
+        getAllUser();
     }, []);
-    const getAllCategories = () => {
-        alert("1")
+    const getAllUser = () => {
+        alert("User")
         CallService(
-            category.GetAll,
+            User.GetAll,
             MethodType.POST,
             false,
             listRequestModel,
             "",
-            getAllCategoriesResponse
+            getAllUserResponse
         )
     }
-    const getAllCategoriesResponse = (data) => {
+    const getAllUserResponse = (data) => {
         setIsLoading(false)
         if (data.pagination && data.result) {
             setTotalPage(data.pagination.totalCount / data.pagination.pageLimit)
-            setCategoryList(data.result)
+            setUserList(data.result)
             setTotalCount(data.pagination.totalCount)
           } 
     }
-    const addBtnClick = () => {
-        toggleManageModal()
-    }
+    
     const HandleRowClicked = () => {
-        alert("hi")
+        alert("row")
     }
     const handlePageChange = () => {
-        alert("hi")
+        alert("change")
     }
     const handlePerRowsChange = () => {
         alert("hi")
     }
-    const handleEdit = () => {
-        alert("hi")
+    const handleView = () => {
+        alert("View details")
     }
     const toggleDeleteModal = () => {
-        alert("hi")
+        alert("Delete")
     }
-    const toggleManageModal = () => {
-        alert("hi")
-    }
+    
+    
     const handleSearch = () => {
         console.log("hi")
     }
@@ -129,13 +127,13 @@ function Category() {
             <div className="page-content">
                 <div className="container-fluid">
                     <ListPageHeader
-                        heading={"Home.Category"}
-                        buttonClick={addBtnClick}
+                        heading={"Home.User"}
+                        showButton={false}
                         onTextChange={handleSearch}
                     />
                     <ListPage
                         columns={columns}
-                        data={categoryList}
+                        data={userList}
                         keyField={keyField}
                         totalCount={totalCount}
                         rowClicked={HandleRowClicked}
@@ -150,4 +148,4 @@ function Category() {
     )
 }
 
-export default Category
+export default User

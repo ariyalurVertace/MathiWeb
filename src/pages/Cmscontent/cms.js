@@ -24,25 +24,20 @@ import {
     defaultPageLimit,
     ModulesName,
 } from "../../constants/defaultValues"
-import { category } from "../../constants/config"
+import { cmscontent } from "../../constants/config"
 import ListPage from "../../components/custom/ListPage"
 import ListPageHeader from "../../components/custom/ListPageHeader"
 import { ApiModuleValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 
-function Category() {
+function Cmscontent() {
     const columns = [
         {
             name: "Name",
             selector: "name",
             sortable: false,
             cell: row => <span>{row.name ? row.name : ""}</span>,
-        }, {
-            name: "Description",
-            selector: "description",
-            sortable: false,
-            cell: row => <span>{row.description ? row.description : ""}</span>,
-        },
+        }, 
         {
             name: "Action",
             selector: "_id",
@@ -59,20 +54,13 @@ function Category() {
                             Edit
                         </Button>
 
-                        <Button
-                            outline
-                            color="danger"
-                            className="mobileViewFonts pl-1 pr-1 ml-2"
-                            onClick={() => toggleDeleteModal(row)}
-                        >
-                            Delete
-                        </Button>
+                        
                     </ButtonGroup>
                 </Row>
             ),
         },
     ]
-    const [categoryList, setCategoryList] = useState([{name:"testing",description:"xdfsdxa"}]);
+    const [cmscontentList, setCategoryList] = useState([{name:"HTML"},{name:"FAQ"}]);
     const [listRequestModel, setListRequestModel] = useState([]);
     const keyField = "id"
     const [totalCount, setTotalCount] = useState(0);
@@ -84,7 +72,7 @@ function Category() {
     const getAllCategories = () => {
         alert("1")
         CallService(
-            category.GetAll,
+            cmscontent.GetAll,
             MethodType.POST,
             false,
             listRequestModel,
@@ -129,13 +117,13 @@ function Category() {
             <div className="page-content">
                 <div className="container-fluid">
                     <ListPageHeader
-                        heading={"Home.Category"}
+                        heading={"Home.cmscontent"}
                         buttonClick={addBtnClick}
                         onTextChange={handleSearch}
                     />
                     <ListPage
                         columns={columns}
-                        data={categoryList}
+                        data={cmscontentList}
                         keyField={keyField}
                         totalCount={totalCount}
                         rowClicked={HandleRowClicked}
@@ -150,4 +138,4 @@ function Category() {
     )
 }
 
-export default Category
+export default Cmscontent

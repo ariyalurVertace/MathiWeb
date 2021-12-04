@@ -24,27 +24,21 @@ import {
     defaultPageLimit,
     ModulesName,
 } from "../../constants/defaultValues"
-import { category } from "../../constants/config"
+import { state } from "../../constants/config"
 import ListPage from "../../components/custom/ListPage"
 import ListPageHeader from "../../components/custom/ListPageHeader"
 import { ApiModuleValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 
-function Category() {
+function State() {
     const columns = [
         {
-            name: "Name",
+            name: "name",
             selector: "name",
             sortable: false,
-            cell: row => <span>{row.name ? row.name : ""}</span>,
-        }, {
-            name: "Description",
-            selector: "description",
-            sortable: false,
-            cell: row => <span>{row.description ? row.description : ""}</span>,
+            cell: row => <span>{row.name ? row.name: ""}</span>,
         },
-        {
-            name: "Action",
+          { name: "Action",
             selector: "_id",
             sortable: false,
             cell: row => (
@@ -72,31 +66,31 @@ function Category() {
             ),
         },
     ]
-    const [categoryList, setCategoryList] = useState([{name:"testing",description:"xdfsdxa"}]);
-    const [listRequestModel, setListRequestModel] = useState([]);
     const keyField = "id"
+    const [stateList, setStateList] = useState([{name:"karan",}])
+    const [listRequestModel, setListRequestModel] = useState([])
     const [totalCount, setTotalCount] = useState(0);
     const [totalPage, setTotalPage] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        getAllCategories();
+        getAllState();
     }, []);
-    const getAllCategories = () => {
+    const getAllState = () => {
         alert("1")
         CallService(
-            category.GetAll,
+            state.GetAll,
             MethodType.POST,
             false,
             listRequestModel,
             "",
-            getAllCategoriesResponse
+            getAllStateResponse
         )
     }
-    const getAllCategoriesResponse = (data) => {
+    const getAllStateResponse = (data) => {
         setIsLoading(false)
         if (data.pagination && data.result) {
             setTotalPage(data.pagination.totalCount / data.pagination.pageLimit)
-            setCategoryList(data.result)
+            setstateList(data.result)
             setTotalCount(data.pagination.totalCount)
           } 
     }
@@ -129,13 +123,13 @@ function Category() {
             <div className="page-content">
                 <div className="container-fluid">
                     <ListPageHeader
-                        heading={"Home.Category"}
+                        heading={"Home.state"}
                         buttonClick={addBtnClick}
                         onTextChange={handleSearch}
                     />
                     <ListPage
                         columns={columns}
-                        data={categoryList}
+                        data={stateList}
                         keyField={keyField}
                         totalCount={totalCount}
                         rowClicked={HandleRowClicked}
@@ -150,4 +144,4 @@ function Category() {
     )
 }
 
-export default Category
+export default State

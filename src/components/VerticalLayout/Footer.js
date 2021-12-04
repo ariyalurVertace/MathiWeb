@@ -7,11 +7,9 @@ const Footer = () => {
       <footer className="footer">
         <div className="container-fluid">
           <Row>
-            <Col sm={6}>{new Date().getFullYear()} © Vertace.</Col>
+            <Col sm={6}>{new Date().getFullYear()} © Mathi.</Col>
             <Col sm={6}>
-              <div className="text-sm-right d-none d-sm-block">
-              
-              </div>
+              <div className="text-sm-right d-none d-sm-block"></div>
             </Col>
           </Row>
         </div>
