@@ -21,6 +21,9 @@ export const productValidation = Yup.object().shape({
   category: Yup.string().required("Category is required"),
   image: Yup.string().required("Image is required"),
 })
+export const notificationValidation = Yup.object().shape({
+  title: Yup.string().required(Message("Title.required")),
+})
 export const roleValidation = Yup.object().shape({
   name: Yup.string().required(Message("Name.required")),
 })

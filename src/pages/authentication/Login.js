@@ -192,4 +192,3 @@ Login.propTypes = {
 }
 
 export default withRouter(Login)
-

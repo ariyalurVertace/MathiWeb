@@ -20,4 +20,11 @@ export const menu = [
     to: "/product",
     badge: "no",
   },
+ {
+  id: "Notification",
+  icon: "bx bx-bell",
+  label: "Notification",
+  to: "/Notification",
+  badge: "no",
+},
 ]

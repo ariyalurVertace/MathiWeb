@@ -25,14 +25,7 @@ export const state = {
   GetOne: BASE_URL + "state/",
 }
 
-export const categories = {
-  GetAll: BASE_URL + "category",
-  GetAllWithOutPagination: BASE_URL + "category",
-  Create: BASE_URL + "category",
-  Delete: BASE_URL + "category/",
-  Update: BASE_URL + "category/",
-  GetOne: BASE_URL + "category/",
-}
+
 
 export const vendor = {
   GetAll: BASE_URL + "vendor",
@@ -80,19 +73,26 @@ export const role = {
   Update: BASE_URL + "api/role/",
   GetOne: BASE_URL + "api/role/",
 }
+export const categories = {
+  GetAll: BASE_URL + "api/category/",
+  Create: BASE_URL + "api/category/",
+  Delete: BASE_URL + "api/category/",
+  Update: BASE_URL + "api/category/",
+  GetOne: BASE_URL + "api/category/",
+}
+export const banner = {
+  GetAll: BASE_URL + "api/banner/",
+  Create: BASE_URL + "api/banner/",
+  Delete: BASE_URL + "api/banner/",
+  Update: BASE_URL + "api/banner/",
+  GetOne: BASE_URL + "api/banner/",
+}
 export const apimoduleroleaccess = {
   GetOne: BASE_URL + "api/apimoduleroleaccess/",
   Create: BASE_URL + "api/apimoduleroleaccess/",
 }
 
-export const banner = {
-  GetAll: BASE_URL + "banner",
-  GetAllWithOutPagination: BASE_URL + "banner",
-  Create: BASE_URL + "banner",
-  Delete: BASE_URL + "banner/",
-  Update: BASE_URL + "banner/",
-  GetOne: BASE_URL + "banner/",
-}
+
 export const notification = {
   GetAll: BASE_URL + "notification",
   GetAllWithOutPagination: BASE_URL + "notification",
