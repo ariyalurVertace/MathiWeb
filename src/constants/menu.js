@@ -1,5 +1,16 @@
 export const menu = [
   {
+    id: "user",
+    icon: "bx bx-user-circle",
+    label: "user",
+    to: "/user",
+    badge: "no",
+  },{
+    id: "state",
+    icon: "bx bx-globe",
+    label: "state",
+    to: "/state",
+  },{
     id: "category",
     icon: "bx bx-category-alt",
     label: "Category",

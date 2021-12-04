@@ -30,7 +30,7 @@ import ListPageHeader from "../../components/custom/ListPageHeader"
 import { ApiModuleValidation } from "../../helpers/validations"
 import { Message } from "../../helpers/language_helper"
 
-function Category() {
+function Product() {
     const columns = [
         {
             name: "Name",
@@ -38,10 +38,20 @@ function Category() {
             sortable: false,
             cell: row => <span>{row.name ? row.name : ""}</span>,
         }, {
-            name: "Description",
-            selector: "description",
+            name: "Price",
+            selector: "price",
             sortable: false,
-            cell: row => <span>{row.description ? row.description : ""}</span>,
+            cell: row => <span>{row.price ? row.price : ""}</span>,
+        },{
+            name: "Stock",
+            selector: "stock",
+            sortable: false,
+            cell: row => <span>{row.stock ? row.stock : ""}</span>,
+        },{
+            name: "Descripition",
+            selector: "descripition",
+            sortable: false,
+            cell: row => <span>{row.descripition ? row.descripition : ""}</span>,
         },
         {
             name: "Action",
@@ -72,7 +82,7 @@ function Category() {
             ),
         },
     ]
-    const [categoryList, setCategoryList] = useState([{name:"testing",description:"xdfsdxa"}]);
+    const [categoryList, setCategoryList] = useState([{name:"silk saree",price:"1000",stock:"15",descripition:"asdf"},{name:"saree",price:"100",stock:"15",descripition:"1234"}]);
     const [listRequestModel, setListRequestModel] = useState([]);
     const keyField = "id"
     const [totalCount, setTotalCount] = useState(0);
@@ -129,7 +139,7 @@ function Category() {
             <div className="page-content">
                 <div className="container-fluid">
                     <ListPageHeader
-                        heading={"Home.Category"}
+                        heading={"Home.Product"}
                         buttonClick={addBtnClick}
                         onTextChange={handleSearch}
                     />
@@ -150,4 +160,4 @@ function Category() {
     )
 }
 
-export default Category
+export default Product
