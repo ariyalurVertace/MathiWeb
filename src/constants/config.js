@@ -87,6 +87,13 @@ export const banner = {
   Update: BASE_URL + "api/banner/",
   GetOne: BASE_URL + "api/banner/",
 }
+export const districts = {
+  GetAll: BASE_URL + "api/district/",
+  Create: BASE_URL + "api/district/",
+  Delete: BASE_URL + "api/district/",
+  Update: BASE_URL + "api/district/",
+  GetOne: BASE_URL + "api/district/",
+}
 export const apimoduleroleaccess = {
   GetOne: BASE_URL + "api/apimoduleroleaccess/",
   Create: BASE_URL + "api/apimoduleroleaccess/",

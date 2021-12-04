@@ -27,6 +27,10 @@ export const notificationValidation = Yup.object().shape({
 export const stateValidation = Yup.object().shape({
   name: Yup.string().required(Message("Name.required")),
 })
+export const districtValidation = Yup.object().shape({
+  name: Yup.string().required(Message("Name.required")),
+  stateId: Yup.string().required(Message("State is required")),
+})
 export const userValidation = Yup.object().shape({
   name: Yup.string().required(Message("Name.required")),
 })
