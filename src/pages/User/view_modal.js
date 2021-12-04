@@ -15,7 +15,7 @@ import {
 import DropDown from "../../components/custom/DropDown"
 import { userValidation } from "../../helpers/validations"
 
-function userAddEditModal(props) {
+function UserAddEditModal(props) {
   const formik = useFormik({
     initialValues: props.user,
     validationSchema: userValidation,
@@ -24,15 +24,16 @@ function userAddEditModal(props) {
     },
     enableReinitialize: true,
   })
+   
 
   return (
     <Modal
-      size="md"
+      size="lg"
       isOpen={props.manageModal}
       toggle={props.toggleManageModal}
     >
       <ModalHeader toggle={props.toggleManageModal}>
-        View User
+        {"View"}
       </ModalHeader>
 
       <form onSubmit={formik.handleSubmit}>
@@ -42,10 +43,10 @@ function userAddEditModal(props) {
               <Row>
                 <Col xs="6" sm="6" md="6" lg="6">
                   <FormGroup className="form-group has-float-label">
-                    <Label className="requiredField">First Name</Label>
+                    <Label className="requiredField">FirstName</Label>
                     <Input
                       className="form-control"
-                      firstname="first name"
+                      name="firstname"
                       type="text"
                       readOnly
                       value={formik.values.firstname}
@@ -53,23 +54,23 @@ function userAddEditModal(props) {
                     />
                     {formik.errors.firstname && (
                       <div className="invalid-feedback d-block">
-                        {formik.errors.name}
+                        {formik.errors.firstname}
                       </div>
                     )}
                   </FormGroup>
                 </Col>
                 <Col xs="6" sm="6" md="6" lg="6">
-                  <FormGroup className="form-group has-float-label">
-                    <Label className="requiredField">Last Name</Label>
+                 <FormGroup className="form-group has-float-label">
+                    <Label className="requiredField">Lastname</Label>
                     <Input
                       className="form-control"
-                      lastname="last name"
+                      name="lastname"
                       type="text"
                       readOnly
                       value={formik.values.lastname}
                       onChange={formik.handleChange}
                     />
-                    {formik.errors.lastname && (
+                     {formik.errors.lastname && (
                       <div className="invalid-feedback d-block">
                         {formik.errors.lastname}
                       </div>
@@ -77,13 +78,49 @@ function userAddEditModal(props) {
                   </FormGroup>
                 </Col>
                 <Col xs="6" sm="6" md="6" lg="6">
-                  <FormGroup className="form-group has-float-label">
-                    <Label className="requiredField">Address</Label>
+                 <FormGroup className="form-group has-float-label">
+                    <Label className="requiredField">phoneNo</Label>
                     <Input
                       className="form-control"
-                      name="adress"
-                      type="text,number"
+                      name="phoneno"
+                      type="number"
                       readOnly
+                      value={formik.values.phoneno}
+                      onChange={formik.handleChange}
+                    />
+                     {formik.errors.phoneno && (
+                      <div className="invalid-feedback d-block">
+                        {formik.errors.phoneno}
+                      </div>
+                    )}
+                    
+                    
+               
+               
+                  </FormGroup>
+                </Col>
+                <Col xs="6" sm="6" md="6" lg="6">
+                 <FormGroup className="form-group has-float-label">
+                    <Label >Email</Label>
+                    <Input
+                      className="form-control"
+                      name="email"
+                      type="text"
+                      readOnly
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                    />
+                </FormGroup>
+                </Col>
+                <Col xs="12" sm="12" md="12" lg="12">
+                 <FormGroup className="form-group has-float-label">
+                 <Label className="requiredField">Address</Label>
+                    <Input
+                      className="form-control"
+                      name="address"
+                      type="text"
+                      readOnly
+                       
                       value={formik.values.address}
                       onChange={formik.handleChange}
                     />
@@ -92,82 +129,28 @@ function userAddEditModal(props) {
                         {formik.errors.address}
                       </div>
                     )}
-                  </FormGroup>
-                </Col>
-                <Col xs="6" sm="6" md="6" lg="6">
-                  <FormGroup className="form-group has-float-label">
-                    <Label className>Mail Id</Label>
-                    <Input
-                      className="form-control"
-                      lastname="mailid"
-                      type="text,number"
-                      readOnly
-                      value={formik.values.mailid}
-                      onChange={formik.handleChange}
-                    />
+                   
                     
-                  </FormGroup>
-                </Col>
-                <Col xs="6" sm="6" md="6" lg="6">
-                  <FormGroup className="form-group has-float-label">
-                    <Label className="requiredField">Mobile Number</Label>
-                    <Input
-                      className="form-control"
-                     mobile number="mobile number"
-                      type="number"
-                      readOnly
-                      value={formik.values.mobilenumber}
-                      onChange={formik.handleChange}
-                    />
-                    {formik.errors.mobilenumber && (
-                      <div className="invalid-feedback d-block">
-                        {formik.errors.mobilenumber}
-                      </div>
-                    )}
+                    
                   </FormGroup>
                 </Col>
                
               </Row>
+              
             </Fragment>
           </ModalBody>
 
           <ModalFooter>
-            <FormGroup className="float-sm-right ">
-              {props.user?.id ? (
-                <Button
-                  className={`btn-shadow btn-multiple-state ${
-                    props.buttonAction ? "disabled show-spinner " : ""
-                  }`}
-                  type="submit"
-                  outline
-                  color="primary"
-                >
-                  <span className="spinner d-inline-block">
-                    <span className="bounce1" />
-                    <span className="bounce2" />
-                    <span className="bounce3" />
-                  </span>
-                  <span className="label ">cancel</span>
-                </Button>
-              ) : (
-                <Button
-                  className={`btn-shadow btn-multiple-state ${
-                    props.buttonAction ? "disabled show-spinner " : ""
-                  }`}
-                  type="submit"
-                  outline
-                  color="primary"
-                >
-                  <span className="spinner d-inline-block">
-                    <span className="bounce1" />
-                    <span className="bounce2" />
-                    <span className="bounce3" />
-                  </span>
-                  <span className="label ">Add</span>
-                </Button>
-              )}
-              
-            </FormGroup>
+            
+              <Button
+                color="danger"
+                outline
+                className="ml-2"
+                onClick={() => props.toggleManageModal()}
+              >
+                Cancel
+              </Button>
+           
           </ModalFooter>
         </div>
       </form>
@@ -175,4 +158,4 @@ function userAddEditModal(props) {
   )
 }
 
-export default userAddEditModal
+export default UserAddEditModal

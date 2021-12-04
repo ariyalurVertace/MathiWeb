@@ -32,9 +32,9 @@ function StateAddEditModal(props) {
       toggle={props.toggleManageModal}
     >
       <ModalHeader toggle={props.toggleManageModal}>
-        {props.state&& props.state.id
-          ? "Update State"
-          : "Add State"}
+        {props.state && props.state.id
+          ? "Update state"
+          : "Add state"}
       </ModalHeader>
 
       <form onSubmit={formik.handleSubmit}>
@@ -59,6 +59,8 @@ function StateAddEditModal(props) {
                     )}
                   </FormGroup>
                 </Col>
+                
+                
               </Row>
             </Fragment>
           </ModalBody>

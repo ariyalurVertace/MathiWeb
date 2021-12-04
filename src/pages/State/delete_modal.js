@@ -22,7 +22,7 @@ function StateDeleteModal(props) {
             <div className="ml-3 mr-2">
               <p className="h5">
                 Are you sure you want to delete this{" "}
-                <strong>{props.State && props.State.name}</strong>{" "}
+                <strong>{props.state && props.state.name}</strong>{" "}
                 State ?
               </p>
             </div>
@@ -37,7 +37,7 @@ function StateDeleteModal(props) {
               props.buttonAction ? "disabled show-spinner " : ""
             }`}
             onClick={() => {
-              props.deleteState(props.State.id)
+              props.deleteState(props.state.id)
             }}
             outline
             color="primary"
